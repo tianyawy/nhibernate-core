@@ -1200,6 +1200,9 @@
     <Compile Include="Stateless\Fetching\User.cs" />
     <Compile Include="Stateless\Org.cs" />
     <Compile Include="Stateless\StatelessSessionQueryFixture.cs" />
+    <Compile Include="SubclassFilterTest\Office.cs" />
+    <Compile Include="SubclassFilterTest\Staff.cs" />
+    <Compile Include="SubclassFilterTest\User.cs" />
     <Compile Include="Subselect\ClassSubselectFixture.cs" />
     <Compile Include="Subselect\Domain.cs" />
     <Compile Include="TestCaseMappingByCode.cs" />
@@ -3014,6 +3017,8 @@
     <EmbeddedResource Include="NHSpecificTest\NH1291AnonExample\Mappings.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SubclassFilterTest\Staff.hbm.xml" />
+    <EmbeddedResource Include="SubclassFilterTest\Copy of joined-subclass.hbm.xml" />
     <EmbeddedResource Include="NHSpecificTest\NH3590\Mappings.hbm.xml" />
     <EmbeddedResource Include="NHSpecificTest\NH3377\Mappings.hbm.xml" />
     <EmbeddedResource Include="NHSpecificTest\NH2865\Mappings.hbm.xml" />
