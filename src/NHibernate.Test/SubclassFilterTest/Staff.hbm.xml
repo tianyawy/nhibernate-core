@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <hibernate-mapping
-  default-access="field.pascalcase-underscore"
 	assembly='NHibernate.Test'
 	namespace='NHibernate.Test.SubclassFilterTest'
 	xmlns='urn:nhibernate-mapping-2.2'>
@@ -10,7 +9,7 @@
       <generator class="native"/>
     </id>    
     
-    <one-to-one name="staff"/>
+    <one-to-one name="Staff"/>
   </class>
 
   <class name='Office' table='Offics'>
@@ -39,11 +38,11 @@
 
 		<joined-subclass name="UserStaff">
 			<key column="id" />
-			<many-to-one name="Users"/>
+      <bag  name="Users" inverse="true" cascade="all">
+        <key column="id"></key>
+        <one-to-many class="User"/>
+      </bag>
 		</joined-subclass>
-
-		<filter name="region" condition="Region = :userRegion"/>
-
 	</class>
 
 </hibernate-mapping>
