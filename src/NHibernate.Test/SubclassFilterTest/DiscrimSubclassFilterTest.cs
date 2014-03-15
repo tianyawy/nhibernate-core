@@ -10,7 +10,7 @@ namespace NHibernate.Test.SubclassFilterTest
 	{
 		protected override IList Mappings
 		{
-			get { return new string[] {"SubclassFilterTest.discrim-subclass.hbm.xml"}; }
+            get { return new string[] { "SubclassFilterTest.discrim-subclass.hbm.xml"}; }
 		}
 
 		protected override string MappingsAssembly

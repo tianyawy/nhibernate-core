@@ -1202,6 +1202,7 @@
     <Compile Include="Stateless\StatelessSessionQueryFixture.cs" />
     <Compile Include="SubclassFilterTest\Office.cs" />
     <Compile Include="SubclassFilterTest\Staff.cs" />
+    <Compile Include="SubclassFilterTest\StaffSubclassFilterTest.cs" />
     <Compile Include="SubclassFilterTest\User.cs" />
     <Compile Include="Subselect\ClassSubselectFixture.cs" />
     <Compile Include="Subselect\Domain.cs" />
