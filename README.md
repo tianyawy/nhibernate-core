@@ -81,3 +81,8 @@ of NHibernate (in no particular order):
 [LinFu]: http://code.google.com/p/linfu
 [Article]: http://www.codeproject.com/KB/recipes/sets.aspx "Add Support for "Set" Collections to .NET"
 [Relinq]: http://relinq.codeplex.com/ "re-linq: Generic LINQ provider"
+
+## Hibernate Config File Position In Test
+1. Find In Dll Folder Name As "hibernate.cfg.xml"
+2. Find In "current-test-configuration" Folder Name As "hibernate.cfg.xml"
+
