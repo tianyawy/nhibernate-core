@@ -43,7 +43,16 @@ namespace NHibernate.DomainModel.Northwind.Entities
 
 		public virtual Role Role { get; set; }
 
-        public virtual FeatureSet Features { get; set; }
+	    public virtual dynamic ToDto()
+	    {
+	        return new
+	        {
+	            name = Name,
+                role = Role.ToDto()
+	        };
+	    }
+
+	    public virtual FeatureSet Features { get; set; }
 
 		public virtual EnumStoredAsString Enum1 { get; set; }
 

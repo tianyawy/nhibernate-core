@@ -12,15 +12,25 @@ namespace NHibernate.Test.Linq
 		[Test]
 		public void CanGetCountOnQueryWithAnonymousType()
 		{
-			var query = from user in db.Users
-						select new { user.Name, RoleName = user.Role.Name };
 
-			int totalCount = query.Count();
+            //var query = db.Users.Where(e=>e.Role!=null).ToList().Select(user => GetDtO(user));
+            
+		    //var linq = query.ToList();
 
-			Assert.AreEqual(3, totalCount);
+            var query2 = db.Users.ToArray().Where(e => e.Role != null).Select(user => GetDtO(user)).ToList();
+
+            var linq2 = ((IEnumerable<dynamic>)query2).ToList();
+		    //int totalCount = query.Count();
+
+		    //Assert.AreEqual(3, totalCount);
 		}
 
-		[Test]
+	    private dynamic GetDtO(User user)
+	    {
+	        return user.ToDto();
+	    }
+
+	    [Test]
 		public void CanGetFirstWithAnonymousType()
 		{
 			var query = from user in db.Users
